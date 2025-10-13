@@ -109,27 +109,24 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h4 className="text-xl font-bold mb-4">{t('footer.followUs')}</h4>
-            <div className="flex space-x-4">
+            <div className={`flex space-x-4 ${isRTL ? 'space-x-reverse' : ''}`}>
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61581742165961"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-green-700 hover:bg-green-600 p-3 rounded-full transition-colors"
                 aria-label="Facebook"
               >
                 <SafeIcon icon={FiFacebook} className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/nextsupplytd/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-green-700 hover:bg-green-600 p-3 rounded-full transition-colors"
                 aria-label="Instagram"
               >
                 <SafeIcon icon={FiInstagram} className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="bg-green-700 hover:bg-green-600 p-3 rounded-full transition-colors"
-                aria-label="Twitter"
-              >
-                <SafeIcon icon={FiTwitter} className="w-5 h-5" />
               </a>
             </div>
           </motion.div>
