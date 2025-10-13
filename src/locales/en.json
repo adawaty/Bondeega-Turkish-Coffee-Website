@@ -1,0 +1,125 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "brewing": "Brewing Guide",
+    "sustainability": "Sustainability",
+    "distribution": "Distribution",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Bondeega",
+    "subtitle": "Premium Turkish Coffee",
+    "tagline": "Taste of Our Coffee",
+    "description": "Experience authentic Turkish coffee crafted with passion by Next Supply Trading & Distribution. Since 2017, we've been bringing you the finest Arabica blends roasted to perfection.",
+    "cta": "Explore Our Collection",
+    "learnMore": "Learn More"
+  },
+  "about": {
+    "title": "About Bondeega",
+    "subtitle": "Egypt's Premier Turkish Coffee Brand",
+    "description": "Bondeega represents the perfect fusion of traditional Turkish coffee-making heritage and modern innovation. Established in 2017 by Next Supply Trading & Distribution, we are committed to delivering exceptional coffee experiences through carefully selected Arabica beans and time-honored roasting techniques.",
+    "mission": "Our Mission",
+    "missionText": "To preserve the authentic taste of Turkish coffee while making it accessible to coffee lovers across Egypt and beyond.",
+    "vision": "Our Vision",
+    "visionText": "To become the leading Turkish coffee brand in the region, recognized for quality, authenticity, and innovation.",
+    "values": "Our Values",
+    "quality": "Quality",
+    "qualityText": "Premium Arabica beans sourced from the finest origins",
+    "authenticity": "Authenticity",
+    "authenticityText": "Traditional roasting methods passed down through generations",
+    "innovation": "Innovation",
+    "innovationText": "Modern packaging and distribution for maximum freshness",
+    "team": "Our Leadership Team",
+    "teamDescription": "Meet the visionaries behind Next Supply Trading & Distribution and Bondeega Coffee",
+    "founderManagingDirector": "Founder & Managing Director",
+    "coFounderFinanceDirector": "Co-Founder & Finance Director",
+    "coFounderOperationsDirector": "Co-Founder & Operations Director",
+    "mohsenBio": "Visionary leader with extensive experience in the coffee industry, driving Bondeega's growth and innovation.",
+    "aliBio": "Financial strategist ensuring sustainable growth and operational excellence across all business units.",
+    "mohamedBio": "Operations expert optimizing distribution networks and ensuring product quality throughout Egypt."
+  },
+  "nextSupply": {
+    "title": "Next Supply Trading & Distribution",
+    "subtitle": "Your Trusted Partner in Premium Coffee",
+    "description": "Next Supply Trading & Distribution is a leading Egyptian company specializing in the import, roasting, packaging, and distribution of premium coffee products. With years of expertise in the coffee industry, we are committed to delivering excellence at every step of the supply chain.",
+    "expertise": "Industry Expertise",
+    "expertiseText": "Decades of experience in coffee trading and distribution",
+    "network": "Distribution Network",
+    "networkText": "Comprehensive coverage across Egypt and the Middle East",
+    "commitment": "Quality Commitment",
+    "commitmentText": "Rigorous quality control from bean to cup"
+  },
+  "products": {
+    "title": "Our Coffee Collection",
+    "subtitle": "Discover Bondeega's signature roasting method across our range of premium Turkish coffee blends.",
+    "flavorProfile": "Flavor Profile",
+    "roast": "Roast"
+  },
+  "brewing": {
+    "title": "Brewing Guide",
+    "subtitle": "Master the Art of Turkish Coffee",
+    "description": "Follow our traditional method to create the perfect cup of Bondeega Turkish coffee.",
+    "step1": "Measure & Grind",
+    "step1Text": "Use 1-2 teaspoons of finely ground Bondeega coffee per cup",
+    "step2": "Add Water",
+    "step2Text": "Pour cold water into your cezve (Turkish coffee pot)",
+    "step3": "Heat Slowly",
+    "step3Text": "Heat on low, stirring gently until foam forms",
+    "step4": "Serve & Enjoy",
+    "step4Text": "Pour into cup, let grounds settle, and savor"
+  },
+  "sustainability": {
+    "title": "Our Commitment to Sustainability",
+    "subtitle": "Building a Better Future for Coffee",
+    "description": "At Bondeega and Next Supply Trading & Distribution, we believe in responsible sourcing and sustainable practices that benefit farmers, communities, and the environment.",
+    "sourcing": "Ethical Sourcing",
+    "sourcingText": "Direct relationships with coffee farmers ensuring fair prices",
+    "environment": "Environmental Care",
+    "environmentText": "Eco-friendly packaging and carbon-neutral operations",
+    "community": "Community Support",
+    "communityText": "Investing in coffee-growing communities and education"
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "subtitle": "Trusted by Coffee Lovers Across Egypt"
+  },
+  "distribution": {
+    "title": "Distribution & Contact",
+    "subtitle": "Find Bondeega Coffee Near You",
+    "description": "Bondeega coffee is available across Egypt through our extensive distribution network. For wholesale inquiries or to become a distributor, please contact Next Supply Trading & Distribution.",
+    "wholesale": "Wholesale Inquiries",
+    "retailer": "Become a Retailer",
+    "contact": "Contact Information",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "addressText": "Cairo, Egypt"
+  },
+  "footer": {
+    "about": "About Bondeega",
+    "aboutText": "Premium Turkish coffee by Next Supply Trading & Distribution. Crafted with passion since 2017.",
+    "quickLinks": "Quick Links",
+    "followUs": "Follow Us",
+    "newsletter": "Newsletter",
+    "newsletterText": "Subscribe to receive updates and special offers",
+    "emailPlaceholder": "Your email address",
+    "subscribe": "Subscribe",
+    "copyright": "© 2025 Bondeega Coffee - Next Supply Trading & Distribution. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in Touch with Next Supply Trading & Distribution",
+    "description": "Have questions about Bondeega coffee or interested in distribution opportunities? We'd love to hear from you.",
+    "whatsapp": "Contact via WhatsApp",
+    "callUs": "Call Us",
+    "info": "Contact Information",
+    "location": "Our Location",
+    "hours": "Business Hours",
+    "hoursText": "Sunday - Thursday: 9:00 AM - 5:00 PM"
+  }
+}
+

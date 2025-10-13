@@ -1,37 +1,41 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
 const { FiSun, FiCoffee, FiMoon, FiPackage } = FiIcons;
 
 const Products = () => {
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.language === 'ar';
+
   const products = [
     {
       id: 1,
+      name: "Dark Roast Premium",
+      arabicName: "تحميص غامق فاخر",
+      roastLevel: "Dark",
+      icon: FiMoon,
+      size: "200gm",
+      imageUrl: "/products/1.png",
+      description: "A bold and intense 200gm dark roast for a rich, full-bodied coffee experience.",
+      flavorProfile: "Low acidity, chocolate notes, smoky finish",
+      color: "from-gray-700 to-amber-800",
+      bgColor: "bg-gray-50"
+    },
+    {
+      id: 2,
       name: "Light Roast Premium",
       arabicName: "تحميص خفيف فاخر",
       roastLevel: "Light",
       icon: FiSun,
       size: "200gm",
-      imageUrl: "https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1759921731114-blob",
+      imageUrl: "/products/2.png",
       description: "Delicate and bright, our 200gm light roast offers a vibrant start to your day.",
       flavorProfile: "Bright acidity, floral aroma, citrus undertones",
       color: "from-yellow-400 to-orange-500",
       bgColor: "bg-yellow-50"
-    },
-    {
-      id: 2,
-      name: "Dark Roast Intense",
-      arabicName: "تحميص غامق مكثف",
-      roastLevel: "Dark",
-      icon: FiMoon,
-      size: "200gm",
-      imageUrl: "https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1759921721520-blob",
-      description: "A bold and intense 200gm dark roast for a rich, full-bodied coffee experience.",
-      flavorProfile: "Low acidity, chocolate notes, smoky finish",
-      color: "from-gray-700 to-amber-800",
-      bgColor: "bg-gray-50"
     },
     {
       id: 3,
@@ -40,7 +44,7 @@ const Products = () => {
       roastLevel: "Light",
       icon: FiSun,
       size: "50gm",
-      imageUrl: "https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1759921738221-blob",
+      imageUrl: "/products/3.png",
       description: "The same bright and floral notes in a convenient 50gm travel-friendly pack.",
       flavorProfile: "Floral aroma, citrus undertones",
       color: "from-yellow-400 to-green-500",
@@ -53,7 +57,7 @@ const Products = () => {
       roastLevel: "Medium",
       icon: FiCoffee,
       size: "50gm",
-      imageUrl: "https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1759921743956-blob",
+      imageUrl: "/products/4.png",
       description: "A balanced and smooth medium roast in a compact 50gm size for any occasion.",
       flavorProfile: "Balanced acidity, caramel sweetness",
       color: "from-amber-500 to-orange-600",
@@ -66,11 +70,63 @@ const Products = () => {
       roastLevel: "Dark",
       icon: FiMoon,
       size: "50gm",
-      imageUrl: "https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1759921752250-blob",
+      imageUrl: "/products/5.png",
       description: "Enjoy our intense and rich dark roast on the go with this 50gm travel pack.",
       flavorProfile: "Chocolate notes, smoky finish",
       color: "from-gray-700 to-green-700",
       bgColor: "bg-gray-50"
+    },
+    {
+      id: 6,
+      name: "Dark Roast Standard",
+      arabicName: "تحميص غامق عادي",
+      roastLevel: "Dark",
+      icon: FiMoon,
+      size: "125gm",
+      imageUrl: "/products/6.png",
+      description: "Our signature dark roast in a 125gm pack, perfect for regular coffee lovers.",
+      flavorProfile: "Rich body, chocolate notes, bold finish",
+      color: "from-gray-700 to-amber-800",
+      bgColor: "bg-gray-50"
+    },
+    {
+      id: 7,
+      name: "Medium Roast Standard",
+      arabicName: "تحميص متوسط عادي",
+      roastLevel: "Medium",
+      icon: FiCoffee,
+      size: "125gm",
+      imageUrl: "/products/7.png",
+      description: "A perfectly balanced 125gm medium roast for everyday enjoyment.",
+      flavorProfile: "Balanced acidity, caramel sweetness, smooth finish",
+      color: "from-amber-500 to-orange-600",
+      bgColor: "bg-amber-50"
+    },
+    {
+      id: 8,
+      name: "Light Roast Standard",
+      arabicName: "تحميص خفيف عادي",
+      roastLevel: "Light",
+      icon: FiSun,
+      size: "125gm",
+      imageUrl: "/products/8.png",
+      description: "Bright and aromatic 125gm light roast for those who prefer a lighter cup.",
+      flavorProfile: "Bright acidity, floral notes, citrus undertones",
+      color: "from-yellow-400 to-green-500",
+      bgColor: "bg-yellow-50"
+    },
+    {
+      id: 9,
+      name: "Medium Roast Premium",
+      arabicName: "تحميص متوسط فاخر",
+      roastLevel: "Medium",
+      icon: FiCoffee,
+      size: "200gm",
+      imageUrl: "/products/9.png",
+      description: "Our premium 200gm medium roast blend, offering the perfect balance of flavor and aroma.",
+      flavorProfile: "Balanced acidity, caramel sweetness, nutty undertones",
+      color: "from-amber-500 to-orange-600",
+      bgColor: "bg-amber-50"
     }
   ];
 
@@ -85,10 +141,10 @@ const Products = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-6">
-            Our Coffee Collection
+            {t('products.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover Bondeega's signature roasting method across our range of premium Turkish coffee blends.
+            {t('products.subtitle')}
           </p>
         </motion.div>
 
@@ -128,13 +184,13 @@ const Products = () => {
                 <p className="text-gray-700 leading-relaxed flex-grow">{product.description}</p>
                 
                 <div>
-                  <h4 className="font-semibold text-green-800 mb-1">Flavor Profile:</h4>
+                  <h4 className="font-semibold text-green-800 mb-1">{t('products.flavorProfile')}:</h4>
                   <p className="text-sm text-gray-600">{product.flavorProfile}</p>
                 </div>
 
                 <div className="flex items-center justify-between pt-4 border-t border-gray-200">
                   <span className="text-sm font-medium text-green-700">
-                    {product.roastLevel} Roast
+                    {product.roastLevel} {t('products.roast')}
                   </span>
                 </div>
               </div>

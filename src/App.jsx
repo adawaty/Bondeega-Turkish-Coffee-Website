@@ -1,36 +1,46 @@
-import React from 'react';
-import { HashRouter as Router } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import NextSupplySection from './components/NextSupplySection';
-import Products from './components/Products';
-import BrewingGuide from './components/BrewingGuide';
-import Sustainability from './components/Sustainability';
-import Testimonials from './components/Testimonials';
-import Distribution from './components/Distribution';
 import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ProductsPage from './pages/ProductsPage';
+import DistributionPage from './pages/DistributionPage';
+import ContactPage from './pages/ContactPage';
 import './App.css';
+
+function AppContent() {
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    document.body.dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
+  }, [i18n.language]);
+
+  return (
+    <div className="min-h-screen bg-white">
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/distribution" element={<DistributionPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
+  );
+}
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-white">
-        <Header />
-        <main>
-          <Hero />
-          <About />
-          <NextSupplySection />
-          <Products />
-          <BrewingGuide />
-          <Sustainability />
-          <Testimonials />
-          <Distribution />
-        </main>
-        <Footer />
-      </div>
+      <AppContent />
     </Router>
   );
 }
 
 export default App;
+

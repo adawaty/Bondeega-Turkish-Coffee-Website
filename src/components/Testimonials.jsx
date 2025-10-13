@@ -1,11 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
 const { FiStar, FiMapPin, FiHeart } = FiIcons;
 
 const Testimonials = () => {
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.language === 'ar';
+
   const testimonials = [
     {
       id: 1,
@@ -87,10 +91,10 @@ const Testimonials = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-6">
-            What Our Customers Say
+            {t('testimonials.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Hear from Egyptian coffee lovers who have made Bondeega part of their daily tradition
+            {t('testimonials.subtitle')}
           </p>
         </motion.div>
 

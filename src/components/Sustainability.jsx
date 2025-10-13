@@ -1,11 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
 const { FiLeaf, FiRecycle, FiGlobe, FiHeart, FiShield, FiTrendingUp } = FiIcons;
 
 const Sustainability = () => {
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.language === 'ar';
+
   const initiatives = [
     {
       icon: FiLeaf,
@@ -62,11 +66,10 @@ const Sustainability = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-6">
-            Sustainability & Innovation
+            {t('sustainability.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our commitment to environmental responsibility and continuous innovation 
-            in coffee production and packaging
+            {t('sustainability.description')}
           </p>
         </motion.div>
 

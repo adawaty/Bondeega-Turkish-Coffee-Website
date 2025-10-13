@@ -1,24 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
 const { FiCoffee, FiHeart } = FiIcons;
 
 const Hero = () => {
-  const scrollToProducts = () => {
-    const element = document.querySelector('#products');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const scrollToAbout = () => {
-    const element = document.querySelector('#about');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.language === 'ar';
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -57,7 +48,7 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="text-5xl md:text-7xl font-bold text-white"
             >
-              Bondeega
+              {t('hero.title')}
             </motion.h1>
             <motion.p
               initial={{ opacity: 0 }}
@@ -65,50 +56,50 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-3xl md:text-4xl font-amiri text-amber-200"
             >
-              بنديجا
+              {isRTL ? 'بنديجا' : t('hero.subtitle')}
             </motion.p>
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto"
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="text-xl md:text-2xl text-green-100 italic"
             >
-              Egypt's Signature Turkish Coffee Brand
+              {t('hero.tagline')}
             </motion.p>
           </div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
             className="space-y-6"
           >
             <p className="text-lg text-green-100 max-w-2xl mx-auto leading-relaxed">
-              From traditional roastery to Egypt's beloved coffee brand, 
-              Bondeega brings you authentic Turkish coffee with artisanal excellence 
-              and modern innovation.
+              {t('hero.description')}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <motion.button
-                onClick={scrollToProducts}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-xl flex items-center space-x-2"
-              >
-                <SafeIcon icon={FiCoffee} className="w-5 h-5" />
-                <span>Explore Our Blends</span>
-              </motion.button>
+            <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center ${isRTL ? 'sm:flex-row-reverse' : ''}`}>
+              <Link to="/products">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className={`bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-xl flex items-center space-x-2 ${isRTL ? 'space-x-reverse' : ''}`}
+                >
+                  <SafeIcon icon={FiCoffee} className="w-5 h-5" />
+                  <span>{t('hero.cta')}</span>
+                </motion.button>
+              </Link>
               
-              <motion.button
-                onClick={scrollToAbout}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border-2 border-white text-white hover:bg-white hover:text-green-800 px-8 py-4 rounded-full font-semibold text-lg flex items-center space-x-2 transition-all duration-300"
-              >
-                <SafeIcon icon={FiHeart} className="w-5 h-5" />
-                <span>Our Story</span>
-              </motion.button>
+              <Link to="/about">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className={`border-2 border-white text-white hover:bg-white hover:text-green-800 px-8 py-4 rounded-full font-semibold text-lg flex items-center space-x-2 transition-all duration-300 ${isRTL ? 'space-x-reverse' : ''}`}
+                >
+                  <SafeIcon icon={FiHeart} className="w-5 h-5" />
+                  <span>{t('hero.learnMore')}</span>
+                </motion.button>
+              </Link>
             </div>
           </motion.div>
         </motion.div>
@@ -116,13 +107,13 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.2 }}
+          transition={{ duration: 1, delay: 1 }}
           className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-white"
         >
           {[
-            { title: "Premium Arabica", subtitle: "Finest Quality Beans" },
-            { title: "Traditional Roasting", subtitle: "Artisanal Excellence" },
-            { title: "Egyptian Heritage", subtitle: "Made with Pride" }
+            { title: isRTL ? "أرابيكا فاخرة" : "Premium Arabica", subtitle: isRTL ? "أفضل حبوب القهوة" : "Finest Quality Beans" },
+            { title: isRTL ? "تحميص تقليدي" : "Traditional Roasting", subtitle: isRTL ? "تميز حرفي" : "Artisanal Excellence" },
+            { title: isRTL ? "تراث مصري" : "Egyptian Heritage", subtitle: isRTL ? "صنع بفخر" : "Made with Pride" }
           ].map((item, index) => (
             <motion.div
               key={index}
@@ -140,3 +131,4 @@ const Hero = () => {
 };
 
 export default Hero;
+

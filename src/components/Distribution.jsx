@@ -1,11 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
 const { FiMapPin, FiShoppingBag, FiTruck, FiPhone, FiGlobe, FiStar } = FiIcons;
 
 const Distribution = () => {
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.language === 'ar';
+
   const regions = [
     {
       name: "Greater Cairo",
@@ -79,8 +84,8 @@ const Distribution = () => {
   ];
 
   const contactInfo = {
-    phone: "+20 2 1234 5678",
-    email: "info@nextsupply.com.eg",
+    phone: "+20 103 151 2020",
+    email: "info@nextsupplytd.com",
     address: "Cairo, Egypt"
   };
 
@@ -95,10 +100,10 @@ const Distribution = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-6">
-            Find Bondeega Near You
+            {t('distribution.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Available across Egypt through our extensive distribution network powered by Next Supply
+            {t('distribution.subtitle')}
           </p>
         </motion.div>
 
