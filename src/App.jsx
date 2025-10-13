@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import FOMOBanner from './components/FOMOBanner';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ProductsPage from './pages/ProductsPage';
@@ -30,6 +31,7 @@ function AppContent() {
         </Routes>
       </main>
       <Footer />
+      <FOMOBanner />
     </div>
   );
 }

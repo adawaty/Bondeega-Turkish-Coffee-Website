@@ -184,7 +184,7 @@ const About = () => {
               </div>
               <div className="p-6 text-center">
                 <h4 className="text-2xl font-bold text-green-800 mb-2">
-                  {isRTL ? 'محسن طحامي' : 'Mohsen Tohami'}
+                  {isRTL ? t('about.mohsenTohami') : 'Mohsen Tohami'}
                 </h4>
                 <p className="text-green-600 font-semibold mb-2">
                   {t('about.founderManagingDirector')}

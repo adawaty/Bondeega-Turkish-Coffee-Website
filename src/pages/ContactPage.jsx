@@ -113,9 +113,13 @@ const ContactPage = () => {
                   <SafeIcon icon={FiPhone} className="w-6 h-6 mt-1 flex-shrink-0" />
                   <div className={isRTL ? 'text-right' : 'text-left'}>
                     <h4 className="font-semibold mb-2">{t('distribution.phone')}</h4>
-                    <p className="text-green-100" dir="ltr">+20 103 151 2020</p>
-                    <p className="text-green-100" dir="ltr">+20 101 348 7811</p>
-                    <p className="text-green-100" dir="ltr">+20 101 351 2020</p>
+                    <a 
+                      href={`tel:${phoneNumber}`}
+                      className="text-green-100 hover:text-white transition-colors block" 
+                      dir="ltr"
+                    >
+                      +20 103 151 2020
+                    </a>
                   </div>
                 </div>
 
@@ -123,7 +127,12 @@ const ContactPage = () => {
                   <SafeIcon icon={FiMail} className="w-6 h-6 mt-1 flex-shrink-0" />
                   <div className={isRTL ? 'text-right' : 'text-left'}>
                     <h4 className="font-semibold mb-2">{t('distribution.email')}</h4>
-                    <p className="text-green-100">info@nextsupplytd.com</p>
+                    <a 
+                      href="mailto:info@nextsupplytd.com"
+                      className="text-green-100 hover:text-white transition-colors"
+                    >
+                      info@nextsupplytd.com
+                    </a>
                   </div>
                 </div>
 

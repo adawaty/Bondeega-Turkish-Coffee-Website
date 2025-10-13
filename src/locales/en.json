@@ -120,6 +120,15 @@
     "location": "Our Location",
     "hours": "Business Hours",
     "hoursText": "Sunday - Thursday: 9:00 AM - 5:00 PM"
+  },
+  "fomo": {
+    "title": "🔥 Special Offer!",
+    "viewers": "people viewing this right now",
+    "message": "Join hundreds of satisfied customers enjoying authentic Turkish coffee. Limited stock available!",
+    "limitedTime": "⏰ Limited Time Offer",
+    "cta": "Order Now via WhatsApp",
+    "trustBadge": "✓ 100% Authentic Turkish Coffee | ✓ Fast Delivery",
+    "whatsappMessage": "Hello! I'm interested in ordering Bondeega Turkish Coffee."
   }
 }
 
