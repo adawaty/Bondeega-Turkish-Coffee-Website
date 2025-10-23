@@ -65,11 +65,13 @@ const Header = () => {
               whileHover={{ scale: 1.05 }}
               className={`flex items-center space-x-4 cursor-pointer ${isRTL ? 'space-x-reverse' : ''}`}
             >
-              <img 
-                src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1759920909971-NEXT%20SUPPLY%20PNG.png" 
-                alt="Next Supply Trading & Distribution Logo" 
-                className="w-16 h-16 object-contain"
-              />
+              <div className="relative w-16 h-16 bg-white rounded-lg shadow-md flex items-center justify-center">
+                <img 
+                  src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1759920909971-NEXT%20SUPPLY%20PNG.png" 
+                  alt="Next Supply Trading & Distribution Logo" 
+                  className="w-14 h-14 object-contain"
+                />
+              </div>
               <div>
                 <h1 className="text-2xl font-bold text-green-800">
                   {isRTL ? 'نكست سبلاي' : 'Next Supply'}

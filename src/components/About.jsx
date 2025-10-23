@@ -175,7 +175,7 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="bg-gradient-to-br from-green-50 to-amber-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
             >
-              <div className="aspect-square overflow-hidden bg-gray-100">
+              <div className="w-full h-96 overflow-hidden bg-gray-100">
                 <img
                   src="/MohsenTohamiFounderManagingDirector.jpg"
                   alt="Mohsen Tohami"
@@ -203,7 +203,7 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-gradient-to-br from-green-50 to-amber-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
             >
-              <div className="aspect-square overflow-hidden bg-gray-100">
+              <div className="w-full h-96 overflow-hidden bg-gray-100">
                 <img
                   src="/AliTahaCo-FounderFinanceDirector.png"
                   alt="Ali Taha"
@@ -231,7 +231,7 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="bg-gradient-to-br from-green-50 to-amber-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
             >
-              <div className="aspect-square overflow-hidden bg-gray-100">
+              <div className="w-full h-96 overflow-hidden bg-gray-100">
                 <img
                   src="/MohamedHamzaCo-FounderOperationsDirector.png"
                   alt="Mohamed Hamza"
